@@ -6,7 +6,7 @@ from utils import cross_entropy_loss, cross_entropy_gradient
 class SGDMomentumOptimized:
     """Optimizador SGD con momentum optimizado para mejor convergencia"""
     
-    def __init__(self, learning_rate=0.005, momentum=0.95):  # LR más bajo, momentum más alto
+    def __init__(self, learning_rate=0.005, momentum=0.95):  
         self.learning_rate = learning_rate
         self.momentum = momentum
         self.velocities = {}
@@ -28,7 +28,6 @@ class SGDMomentumOptimized:
             (1 - self.momentum) * layer.dbias
         )
         
-        # Actualizar pesos con learning rate decay opcional
         layer.weights -= self.learning_rate * self.velocities[layer_idx]['weights']
         layer.bias -= self.learning_rate * self.velocities[layer_idx]['bias']
 
