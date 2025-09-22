@@ -28,7 +28,7 @@ def save_model(layers, filename, accuracy):
             "units": layer.weights.shape[0],
             "activation": "relu" if i < len(layers)-1 else "softmax",
             "W": layer.weights.tolist(),
-            "b": layer.bias.flatten().tolist()  # Formato correcto
+            "b": layer.bias.flatten().tolist()  
         }
         model_config["layers"].append(layer_config)
     
