@@ -66,7 +66,7 @@ def evaluate_model(model, X_test, y_test):
 
 # ==================== GUARDAR MODELO ====================
 def save_model(model, scaler, accuracy, filename='fashion_mnist_best_model.joblib'):
-    # Guardar modelo y scaler
+    
     model_data = {
         'model': model,
         'scaler': scaler,
