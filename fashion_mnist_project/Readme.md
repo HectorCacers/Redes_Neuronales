@@ -3,8 +3,6 @@
 ```markdown
 #  Fashion MNIST - Clasificación
 
-##  Resultado Destacado: 88.41% accuracy
-
 ## 📁 Archivos:
 - `main_optimized.py` - Entrenamiento principal
 - `main.py` - solo para comparar las epocas con los drpout y l2
