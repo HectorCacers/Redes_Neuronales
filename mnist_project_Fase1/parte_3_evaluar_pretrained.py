@@ -131,16 +131,12 @@ def main():
     evaluator = MNISTPretrainedEvaluator()
     
     try:
-        # 1. Cargar modelo pre-entrenado
         evaluator.load_pretrained_model("mnist_mlp_pretty.json")
         
-        # 2. Cargar datos de prueba
         evaluator.load_test_data()
         
-        # 3. Evaluar precisión 
         accuracy = evaluator.evaluate_accuracy()
         
-        # 4. Visualizar predicciones
         evaluator.visualize_predictions()
         
         print(f"\nParte 3 completada. Precisión: {accuracy*100:.2f}%")
